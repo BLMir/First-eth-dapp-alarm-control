@@ -9,6 +9,7 @@ contract Panel {
         string desc;
         uint temp;
         bool isPositive;
+        address owner;
     }
 
     mapping(uint => ControlPoint) public controlPoints;
@@ -23,6 +24,6 @@ contract Panel {
 
     function addControlPoint(string memory _desc, uint _temp,bool _isPositive) public {
         controlPointCount++;
-        controlPoints[controlPointCount] = ControlPoint(controlPointCount,_desc,_temp,_isPositive);
+        controlPoints[controlPointCount] = ControlPoint(controlPointCount,_desc,_temp,_isPositive, msg.sender);
     }
 }
