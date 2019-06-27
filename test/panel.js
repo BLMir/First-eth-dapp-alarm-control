@@ -18,9 +18,8 @@ contract("Panel", function(accounts) {
         }).then(function (controlPoint) {
             assert.equal(controlPoint[0], 1, "correct id");
             assert.equal(controlPoint[1], "con1", "correct name");
-            assert.equal(controlPoint[2], 30, "correct temp");
-            assert.equal(controlPoint[3], true, "correct value");
-
+            assert.equal(controlPoint[2], "first connection", "correct id");
+            assert.equal(controlPoint[3], 30, "correct temp");
         })
     });
 
