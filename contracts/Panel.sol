@@ -6,9 +6,9 @@ contract Panel {
 
     struct ControlPoint {
         uint id;
+        string name;
         string desc;
         uint temp;
-        bool isPositive;
         address owner;
     }
 
@@ -19,11 +19,11 @@ contract Panel {
         uint temp;
     }
     constructor() public{
-        addControlPoint("con1",30,true);
+        addControlPoint("con1","first connection",30);
     }
 
-    function addControlPoint(string memory _desc, uint _temp,bool _isPositive) public {
+    function addControlPoint(string memory _name,string memory _desc, uint _temp) public {
         controlPointCount++;
-        controlPoints[controlPointCount] = ControlPoint(controlPointCount,_desc,_temp,_isPositive, msg.sender);
+        controlPoints[controlPointCount] = ControlPoint(controlPointCount,_name,_desc,_temp,msg.sender);
     }
 }
