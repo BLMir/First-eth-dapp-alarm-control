@@ -1,2 +1,2 @@
-# First_Eth_dapp_Alarm_control
-Control Alarm base on Ethereum dapp
+# Eth dapp: alarm control
+In order to get into the BC world I created a small dapp to store alarms from differents devices and store them in eth block chain.
